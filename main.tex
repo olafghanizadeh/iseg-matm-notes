@@ -83,7 +83,7 @@
 \chapter{How money is created (and destroyed) in modern economies}
 \section{Monetary base and money}
 
-$$MB=\text{Notes} + \text{Coins}$$ 2323232 Money is issued by the Central Bank in circulation. So the monetary base is the amount of notes and coins in Circulation plus the the amount notes and coins in Reserves. 
+$$MB=\text{Notes} + \text{Coins}$$ Money is issued by the Central Bank in circulation. So the monetary base is the amount of notes and coins in Circulation plus the the amount notes and coins in Reserves. 
 
 Money, is the means of payment, the titles owned by households, businesses and the state, used for:
 \begin{itemize}
@@ -806,10 +806,10 @@ This led to AD being kept at 100 \yen, which is max production capacity which en
 
 \begin{figure}[H]
     \centering
-        \begin{tikzpicture}[scale = 3]
+        \begin{tikzpicture}[scale = 4]
     % Draw axes
     \draw [<->, very thick] (0,2) node (yaxis) [left] {$P$}
-        |- (3.3,0) node (xaxis) [right] {$q$};
+        |- (3.3,0) node (xaxis) [right] {$Q$};
     \node at (0.5,0)(lf){};
     \node[below] at (2.5,0) (80){80};
     \node[below] at (3,0) (100){100};
@@ -836,9 +836,48 @@ This led to AD being kept at 100 \yen, which is max production capacity which en
       \draw[dashed, thick] (40) -- (1.25,1.20);
       \draw[thick] (3,0.5) -- node[pos=0.5,sloped,above, rotate = 180]{Production capacity} (3,2);
     \end{tikzpicture}
-    \caption{Caption}
+    \caption{Individual firm price determination}
 \end{figure}
 
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance =-100pt, scale = 4]
+        % Draw axes
+        \draw [<->, very thick] (0,2) node (yaxis) [above] {Income}
+            |- (3,0) node (xaxis) [right] {Labour};
+    
+        
+        \coordinate (lf) at (0.5,0);
+            \coordinate (point) at (2.5,1.8);
+            \coordinate (40) at (1.25,0);
+            
+            \draw[dashed]  (40) node[below]{40} -- (1.25, 0.67) --  (0,0.67) node[left]{160\euro};
+            \fill[black] (1.25,0.67) circle(0.5pt);
+            \node[above left] at (1.25,0.67) {Profit = 0\euro};
+    
+        
+        \node[below] at (2.5,0) (80){80};
+        
+        
+       \node[left] at (0, 1.8) (30){320\euro};
+       
+       \draw[dashed, thick] (80) -- (point);
+       
+       
+           \draw (lf) -- (point) node [right]{$80 \text{\euro} = P$};
+           \draw (lf) -- (2.5, 1) node [right]{$80 \text{\euro} = F$};
+                  \draw (lf) -- (2.5, 0.3) node [right]{$80 \text{\euro} = RM + E$};
+    
+    
+           
+    \draw[decorate, decoration={brace,mirror,amplitude=10pt}] (0,0) -- (lf) node [black,midway, below, yshift= -1 em] {$L_f$};
+    
+        
+        \end{tikzpicture}
+    
+    \caption{Income shares}
+\end{figure}
 
 \paragraph{Keynesian idea:} AD may determine a level of output below full employment. 
 
