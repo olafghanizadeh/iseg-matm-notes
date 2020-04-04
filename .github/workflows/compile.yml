@@ -17,6 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           allow_duplicate: true
+          tag_name: Release
           release_name: ${{ github.event.head_commit.message }}
           draft: false
           prerelease: false
